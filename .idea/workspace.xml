@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/list.py" line="139" />
+    <bookmark url="file://$PROJECT_DIR$/DataStructuresAndAlgorithms/list.py" line="139" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e14bbff4-4920-40a5-9fac-7d6717404eab" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/bitmap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/binarytree.py" beforeDir="false" afterPath="$PROJECT_DIR$/binarytree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ml/preprocess.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,6 +16,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/algorithm$list.coverage" NAME="list Coverage Results" MODIFIED="1596180014377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/algorithm$preprocess.coverage" NAME="preprocess Coverage Results" MODIFIED="1596794249387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ml" />
     <SUITE FILE_PATH="coverage/algorithm$array.coverage" NAME="array Coverage Results" MODIFIED="1596165648963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/algorithm$binarytree.coverage" NAME="binarytree Coverage Results" MODIFIED="1596688839137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/algorithm$bitmap.coverage" NAME="bitmap Coverage Results" MODIFIED="1596769913994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -27,7 +25,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="stack.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stack.py">
+        <entry file="file://$PROJECT_DIR$/DataStructuresAndAlgorithms/stack.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="444">
               <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
@@ -36,7 +34,7 @@
         </entry>
       </file>
       <file leaf-file-name="bitmap.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bitmap.py">
+        <entry file="file://$PROJECT_DIR$/DataStructuresAndAlgorithms/bitmap.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret selection-end-line="2" selection-end-column="21" />
@@ -47,13 +45,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="graph.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/graph.py">
+      <file leaf-file-name="graph.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataStructuresAndAlgorithms/graph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="202" lean-forward="true" selection-start-line="202" selection-end-line="202" />
+            <state relative-caret-position="559">
+              <caret line="201" column="47" selection-start-line="201" selection-start-column="47" selection-end-line="201" selection-end-column="47" />
               <folding>
                 <element signature="e#39#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="preprocess.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ml/preprocess.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="688">
+              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,6 +91,7 @@
         <option value="$PROJECT_DIR$/bitmap.py" />
         <option value="$PROJECT_DIR$/stack.py" />
         <option value="$PROJECT_DIR$/graph.py" />
+        <option value="$PROJECT_DIR$/ml/preprocess.py" />
       </list>
     </option>
   </component>
@@ -114,6 +125,11 @@
               <item name="algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithm" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="ml" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -128,6 +144,14 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ml\algorithm\DataStructuresAndAlgorithms" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ml\algorithm\ml" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -140,26 +164,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.bitmap">
-    <configuration name="array" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="algorithm" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="E:\ml\algorithm\DataStructuresAndAlgorithms\array.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.preprocess">
     <configuration name="binarytree" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -217,6 +222,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="algorithm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ml" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ml/preprocess.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="stack" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -237,19 +261,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.array" />
       <item itemvalue="Python.list" />
       <item itemvalue="Python.stack" />
       <item itemvalue="Python.binarytree" />
       <item itemvalue="Python.bitmap" />
+      <item itemvalue="Python.preprocess" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.preprocess" />
         <item itemvalue="Python.bitmap" />
         <item itemvalue="Python.binarytree" />
         <item itemvalue="Python.stack" />
         <item itemvalue="Python.list" />
-        <item itemvalue="Python.array" />
       </list>
     </recent_temporary>
   </component>
@@ -267,16 +291,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="-8" width="2498" height="1456" extended-state="7" />
+    <frame x="70" y="-8" width="2498" height="1456" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24516629" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36194897" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32869297" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.6017015" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10049221" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
@@ -305,7 +329,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stack.py">
+    <entry file="file://$PROJECT_DIR$/DataStructuresAndAlgorithms/stack.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3922">
           <caret line="106" column="36" lean-forward="true" selection-start-line="106" selection-start-column="36" selection-end-line="106" selection-end-column="36" />
@@ -326,7 +350,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/array.py">
+    <entry file="file://$PROJECT_DIR$/DataStructuresAndAlgorithms/array.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2812">
           <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
@@ -336,7 +360,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/array.py">
+    <entry file="file://$PROJECT_DIR$/DataStructuresAndAlgorithms/array.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3256">
           <caret line="89" column="8" lean-forward="true" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
@@ -361,7 +385,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/array.py">
+    <entry file="file://$PROJECT_DIR$/DataStructuresAndAlgorithms/array.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="77" selection-start-line="77" selection-end-line="77" />
@@ -385,7 +409,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/binarytree.py">
+    <entry file="file://$PROJECT_DIR$/DataStructuresAndAlgorithms/binarytree.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-18093">
           <caret selection-end-line="2" selection-end-column="21" />
@@ -402,14 +426,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list.py">
+    <entry file="file://$PROJECT_DIR$/DataStructuresAndAlgorithms/list.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7008">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitmap.py">
+    <entry file="file://$PROJECT_DIR$/DataStructuresAndAlgorithms/bitmap.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="2" selection-end-column="21" />
@@ -419,19 +443,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stack.py">
+    <entry file="file://$PROJECT_DIR$/DataStructuresAndAlgorithms/stack.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
           <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph.py">
+    <entry file="file://$PROJECT_DIR$/ml/000300.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataStructuresAndAlgorithms/graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="202" lean-forward="true" selection-start-line="202" selection-end-line="202" />
+        <state relative-caret-position="559">
+          <caret line="201" column="47" selection-start-line="201" selection-start-column="47" selection-end-line="201" selection-end-column="47" />
           <folding>
             <element signature="e#39#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ml/preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
