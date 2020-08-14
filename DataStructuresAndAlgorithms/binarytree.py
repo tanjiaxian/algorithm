@@ -30,7 +30,6 @@ class BinNode(object):
         self.npl = 1  # Null Path Length
         self.color = RBColor.RB_RED  # 颜色(红黑树)
 
-
     @property
     def parent(self):
         return self._parent
@@ -246,14 +245,15 @@ class BinNode(object):
             print(x.data, end="->")
 
     def __eq__(self, other):
-        if not other or not self:
+        if other and self:
+            return self._data == other.data
+        elif (not other) and (not self):
+            return True
+        else:
             return False
-        return self._data == other.data
 
     def __ne__(self, other):
-        if not other or not self:
-            return False
-        return not (self._data == other.data)
+        return not (self == other)
 
     def __lt__(self, other):
         if not other or not self:
@@ -359,13 +359,13 @@ class BinTree(object):
     def __bool__(self):
         return bool(self.root is not None)
 
-    def __updateHeight(self, x: BinNode):
+    def _updateHeight(self, x: BinNode):
         x.height = 1 + max([stature(x.lc), stature(x.rc)])
         return x.height
 
-    def __updateHeightAbove(self, x: BinNode):
+    def _updateHeightAbove(self, x: BinNode):
         while x:
-            self.__updateHeight(x)
+            self._updateHeight(x)
             x = x.parent
 
     @property
@@ -394,13 +394,13 @@ class BinTree(object):
     def insertAsLC(self, x: BinNode, value: Any):
         self._size += 1
         x.insertAsLC(value)
-        self.__updateHeightAbove(x)
+        self._updateHeightAbove(x)
         return x.lc
 
     def insertAsRC(self, x: BinNode, value: Any):
         self._size += 1
         x.insertAsRC(value)
-        self.__updateHeightAbove(x)
+        self._updateHeightAbove(x)
         return x.rc
 
     def attachAsLC(self, x: BinNode, S):
@@ -416,7 +416,7 @@ class BinTree(object):
         x.lc = S.root
         x.lc.parent = x
         self._size += (S.size - xlc_size)
-        self.__updateHeightAbove(x)
+        self._updateHeightAbove(x)
         S.root = None
         S.size = 0
         del S  # 删除这个变量名
@@ -435,7 +435,7 @@ class BinTree(object):
         x.rc = S.root
         x.rc.parent = x
         self._size += (S.size - xrc_size)
-        self.__updateHeightAbove(x)
+        self._updateHeightAbove(x)
         S.root = None
         S.size = 0
         del S
@@ -447,7 +447,7 @@ class BinTree(object):
         n = self.removeAt(x)
         self._size -= n
 
-        self.__updateHeightAbove(xp)
+        self._updateHeightAbove(xp)
 
         return n
 
@@ -477,7 +477,7 @@ class BinTree(object):
         S._size = x.size()
         self._size -= S.size
 
-        self.__updateHeightAbove(xp)
+        self._updateHeightAbove(xp)
 
         return S
 
@@ -518,7 +518,6 @@ if __name__ == '__main__':
     lrc = tree.insertAsLC(lc, 1)
     rllc = tree.insertAsRC(llc, 9)
 
-
     # print(tree)
     # print(x.succ())
     # print(x.size())
@@ -558,8 +557,8 @@ if __name__ == '__main__':
     # tree.attachAsRC(lrc, otree)
     # print(tree)
 
-    # print(tree.remove(llc))
-    # print(tree)
-
-    print(tree.secede(rc))
+    print(tree.remove(llc))
     print(tree)
+
+    # print(tree.secede(rc))
+    # print(tree)

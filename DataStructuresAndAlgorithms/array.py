@@ -91,8 +91,8 @@ class Array(object):
 
         self._data.insert(index, value)
 
-    def delete(self, lo: int, hi: int):
-
+    def remove_section(self, lo: int, hi: int):
+        """删除区间[lo,hi)"""
         if lo >= hi:
             return 0
         while hi < len(self._data):
@@ -101,6 +101,12 @@ class Array(object):
             hi += 1
         self._data = self._data[:lo]  # 截断
         return hi - lo
+
+    def remove(self, r: int):
+
+        e = self._data[r]
+        self.remove_section(r, r+1)
+        return e
 
     def pop(self, index: int):
 
@@ -144,11 +150,21 @@ class Array(object):
         self._data = self._data[:i + 1]
         return j - i
 
-    def search(self, value: Any, lo: int, hi: int):
+    def search_section(self, value: Any, lo: int, hi: int):
         """
             有序向量的查找
         """
         return self.__binSearch_A(value, lo, hi) if random.randint(0, 1) else self.__binSearch_B(value, lo, hi)
+
+    def search(self, value: Any):
+        """
+            有序向量的查找
+        """
+        if not self._data:
+            return -1
+        lo = 0
+        hi = len(self._data)
+        return self.__binSearch_C(value, lo, hi)
 
     def __binSearch_A(self, value: Any, lo: int, hi: int):
         """
@@ -177,6 +193,19 @@ class Array(object):
             else:
                 lo = mi
         return lo if value == self._data[lo] else -1
+
+    def __binSearch_C(self, value: Any, lo: int, hi: int):
+        """
+            二分查找版本C
+            有序向量区间[lo, hi)内查找元素value
+        """
+        while lo < hi:
+            mi = (lo+hi)//2
+            if value < self._data[mi]:
+                hi = mi
+            else:
+                lo = mi+1
+        return lo -1
 
     def __iter__(self):
         for item in self._data:
