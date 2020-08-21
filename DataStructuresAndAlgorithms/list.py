@@ -27,6 +27,9 @@ class ListNode(object):
     def __repr__(self):
         return str(self.data)
 
+    def __bool__(self):
+        return bool(id(self) != id(None))
+
 
 class List(object):
 
@@ -248,6 +251,7 @@ class List(object):
 if __name__ == '__main__':
     a = List()
     b = List()
+    t = a.first()
     for i in range(10):
         a.insertAsFirst(i)
     for i in range(8):

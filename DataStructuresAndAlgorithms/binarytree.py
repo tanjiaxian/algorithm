@@ -14,6 +14,12 @@ def stature(p):
     return p.height
 
 
+def npl(p):
+    if not p:
+        return 0
+    return 1 + min(npl(p.lc), npl(p.rc))
+
+
 class RBColor(Enum):
     RB_RED = "红色"
     RB_BLACK = "黑色"
@@ -518,6 +524,8 @@ if __name__ == '__main__':
     lrc = tree.insertAsLC(lc, 1)
     rllc = tree.insertAsRC(llc, 9)
 
+    lc.npl = npl(lc)
+    print(lc.npl)
     # print(tree)
     # print(x.succ())
     # print(x.size())
@@ -557,8 +565,8 @@ if __name__ == '__main__':
     # tree.attachAsRC(lrc, otree)
     # print(tree)
 
-    print(tree.remove(llc))
-    print(tree)
+    # print(tree.remove(llc))
+    # print(tree)
 
     # print(tree.secede(rc))
     # print(tree)

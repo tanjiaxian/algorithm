@@ -10,14 +10,20 @@ from DataStructuresAndAlgorithms.binarytree import BinTree, BinNode, stature
 class Entry(object):
     """词条模板类"""
 
-    def __init__(self, key: Any, value: Any):
+    def __init__(self, key=None, value=None):
         self.key = key
         self.value = value
 
     def __lt__(self, other):
+        if self.key is None or other.key is None:
+            return False
+
         return self.key < other.key
 
     def __gt__(self, other):
+        if self.key is None or other.key is None:
+            return False
+
         return self.key > other.key
 
     def __eq__(self, other):
@@ -25,6 +31,9 @@ class Entry(object):
 
     def __ne__(self, other):
         return self.key != other.key
+
+    def __repr__(self):
+        return str(self.key)+":"+str(self.value)
 
 
 class BST(BinTree):

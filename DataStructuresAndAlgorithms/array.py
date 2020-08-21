@@ -4,6 +4,8 @@
 import random
 from typing import Any
 
+from DataStructuresAndAlgorithms.priority_queue import PQ_ComplHeap
+
 
 class Array(object):
 
@@ -105,7 +107,7 @@ class Array(object):
     def remove(self, r: int):
 
         e = self._data[r]
-        self.remove_section(r, r+1)
+        self.remove_section(r, r + 1)
         return e
 
     def pop(self, index: int):
@@ -200,12 +202,73 @@ class Array(object):
             有序向量区间[lo, hi)内查找元素value
         """
         while lo < hi:
-            mi = (lo+hi)//2
+            mi = (lo + hi) // 2
             if value < self._data[mi]:
                 hi = mi
             else:
-                lo = mi+1
-        return lo -1
+                lo = mi + 1
+        return lo - 1
+
+    def heapSort(self, lo: int, hi: int):
+        """采用完全二叉堆进行排序"""
+        H = PQ_ComplHeap(data=self._data[lo:hi])
+        while not H.empty():
+            hi -= 1
+            self._data[hi] = H.delMax()
+
+    def _partition_A(self, lo: int, hi: int):
+        """
+            版本A: 轴点构造算法: 通过调整元素位置构造区间[lo, hi]的轴点,并返回其秩
+        """
+        t = random.randint(lo, hi-1)
+        self._data[lo], self._data[t] = self._data[t], self._data[lo]
+        pivot = self._data[lo]  # 以首元素为候选轴点,经以上交换,等效于随机选取
+        while lo < hi:
+            while lo < hi and pivot <= self._data[hi]:
+                hi -= 1
+
+            self._data[lo] = self._data[hi]
+
+            while(lo < hi) and (self._data[lo] <= pivot):
+                lo += 1
+
+            self._data[hi] = self._data[lo]
+        self._data[lo] = pivot
+        return lo
+
+    def _partition_B(self, lo: int, hi: int):
+        """版本B"""
+        t = random.randint(lo, hi - 1)
+        self._data[lo], self._data[t] = self._data[t], self._data[lo]
+        pivot = self._data[lo]  # 以首元素为候选轴点,经以上交换,等效于随机选取
+
+        while lo < hi:
+            while lo < hi:
+                if pivot < self._data[hi]:
+                    hi -= 1
+                else:
+                    self._data[lo] = self._data[hi]
+                    lo += 1
+                    break
+
+            while lo < hi:
+                if self._data[lo] < pivot:
+                    lo += 1
+                else:
+                    self._data[hi] = self._data[lo]
+                    hi -= 1
+                    break
+
+        self._data[lo] = pivot
+        return lo
+
+    def quickSort(self, lo: int, hi: int):
+        """快速排序"""
+        if hi - lo < 2:
+            return
+        mi = self._partition_B(lo, hi - 1)
+        self.quickSort(lo, mi)
+        self.quickSort(mi+1, hi)
 
     def __iter__(self):
         for item in self._data:
@@ -218,15 +281,16 @@ class Array(object):
 if __name__ == '__main__':
     # [1, 4, 7, 5, 3, 9, 6, 8, 2]
     # [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9]
-    a = Array(capacity=11, data=[1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9])
+    a = Array(capacity=11, data=[1, 2, 3, 4, 5, 6, 7, 8, 9])
     # print(a)
     # a.permute()
-    # a.unsort(2, 8)
-    # print(a)
+    a.unsort(0, 9)
+    print(a)
     # print(a.find(-1, 0, 8))
     #
     # print(a.deduplicate())
     # print(a)
     # print(a.unquify())
-    print(a.search(8, 1, 7))
+    a.quickSort(0, 9)
+    print(a.search_section(8, 1, 9))
     print(a)
